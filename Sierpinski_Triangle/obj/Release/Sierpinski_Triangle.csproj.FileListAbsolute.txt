@@ -1,0 +1,13 @@
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\bin\Release\Sierpinski_Triangle.exe.config
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\bin\Release\Sierpinski_Triangle.exe
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\bin\Release\Sierpinski_Triangle.pdb
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\Sierpinski_Triangle.Properties.Resources.resources
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\Sierpinski_Triangle.csproj.GenerateResource.cache
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\Sierpinski_Triangle.csproj.CoreCompileInputs.cache
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\Sierpinski_Triangle.exe
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\Sierpinski_Triangle.pdb
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\Sierpinski_Triangle.csprojAssemblyReference.cache
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\bin\Release\aa-ER\Sierpinski_Triangle.resources.dll
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\Sierpinski_Triangle.mainScreen.resources
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\Sierpinski_Triangle.mainScreen.aa-ER.resources
+C:\Users\dizon\source\repos\Sierpinski_Triangle\Sierpinski_Triangle\obj\Release\aa-ER\Sierpinski_Triangle.resources.dll
