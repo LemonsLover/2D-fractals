@@ -1,7 +1,7 @@
 ﻿
-namespace Sierpinski_Triangle
+namespace fractals_2D
 {
-    partial class mainScreen
+    partial class Sierpinski_Triangle
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Sierpinski_Triangle
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sierpinski_Triangle));
             this.pictureBoxScreen = new System.Windows.Forms.PictureBox();
             this.buttonDraw = new System.Windows.Forms.Button();
             this.numericUpDownDotWidth = new System.Windows.Forms.NumericUpDown();
@@ -49,8 +49,9 @@ namespace Sierpinski_Triangle
             this.label2 = new System.Windows.Forms.Label();
             this.checkBoxRndColors = new System.Windows.Forms.CheckBox();
             this.labelSpeed = new System.Windows.Forms.Label();
-            this.checkBoxOneATick = new System.Windows.Forms.CheckBox();
+            this.checkBoxOnePerTick = new System.Windows.Forms.CheckBox();
             this.checkBoxRndFirstDot = new System.Windows.Forms.CheckBox();
+            this.buttonToMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDotWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
@@ -214,11 +215,11 @@ namespace Sierpinski_Triangle
             resources.ApplyResources(this.labelSpeed, "labelSpeed");
             this.labelSpeed.Name = "labelSpeed";
             // 
-            // checkBoxOneATick
+            // checkBoxOnePerTick
             // 
-            resources.ApplyResources(this.checkBoxOneATick, "checkBoxOneATick");
-            this.checkBoxOneATick.Name = "checkBoxOneATick";
-            this.checkBoxOneATick.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBoxOnePerTick, "checkBoxOnePerTick");
+            this.checkBoxOnePerTick.Name = "checkBoxOnePerTick";
+            this.checkBoxOnePerTick.UseVisualStyleBackColor = true;
             // 
             // checkBoxRndFirstDot
             // 
@@ -226,12 +227,20 @@ namespace Sierpinski_Triangle
             this.checkBoxRndFirstDot.Name = "checkBoxRndFirstDot";
             this.checkBoxRndFirstDot.UseVisualStyleBackColor = true;
             // 
-            // mainScreen
+            // buttonToMenu
+            // 
+            resources.ApplyResources(this.buttonToMenu, "buttonToMenu");
+            this.buttonToMenu.Name = "buttonToMenu";
+            this.buttonToMenu.UseVisualStyleBackColor = true;
+            this.buttonToMenu.Click += new System.EventHandler(this.buttonTest_Click);
+            // 
+            // Sierpinski_Triangle
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonToMenu);
             this.Controls.Add(this.checkBoxRndFirstDot);
-            this.Controls.Add(this.checkBoxOneATick);
+            this.Controls.Add(this.checkBoxOnePerTick);
             this.Controls.Add(this.labelSpeed);
             this.Controls.Add(this.checkBoxRndColors);
             this.Controls.Add(this.label2);
@@ -249,7 +258,8 @@ namespace Sierpinski_Triangle
             this.Controls.Add(this.numericUpDownDotWidth);
             this.Controls.Add(this.buttonDraw);
             this.Controls.Add(this.pictureBoxScreen);
-            this.Name = "mainScreen";
+            this.Name = "Sierpinski_Triangle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sierpinski_Triangle_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDotWidth)).EndInit();
@@ -282,8 +292,9 @@ namespace Sierpinski_Triangle
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBoxRndColors;
         private System.Windows.Forms.Label labelSpeed;
-        private System.Windows.Forms.CheckBox checkBoxOneATick;
+        private System.Windows.Forms.CheckBox checkBoxOnePerTick;
         private System.Windows.Forms.CheckBox checkBoxRndFirstDot;
+        private System.Windows.Forms.Button buttonToMenu;
     }
 }
 

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F045E55D-8F9A-4111-837B-345D8EEC4354}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Sierpinski_Triangle</RootNamespace>
-    <AssemblyName>Sierpinski_Triangle</AssemblyName>
+    <RootNamespace>fractals_2D</RootNamespace>
+    <AssemblyName>fractals_2D</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,19 +46,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sierpinski_Triangle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sierpinski_Triangle.Designer.cs">
+      <DependentUpon>Sierpinski_Triangle.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.aa-ER.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Sierpinski_Carpet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sierpinski_Carpet.Designer.cs">
+      <DependentUpon>Sierpinski_Carpet.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Sierpinski_Carpet.resx">
+      <DependentUpon>Sierpinski_Carpet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sierpinski_Triangle.aa-ER.resx">
+      <DependentUpon>Sierpinski_Triangle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sierpinski_Triangle.resx">
+      <DependentUpon>Sierpinski_Triangle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -68,6 +86,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sierpinski_Triangle
+namespace fractals_2D
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Sierpinski_Triangle
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainScreen());
+            Application.Run(new Menu());
         }
     }
 }
