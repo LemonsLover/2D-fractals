@@ -41,17 +41,16 @@ namespace fractals_2D
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.labelColor = new System.Windows.Forms.Label();
             this.pictureBoxLine = new System.Windows.Forms.PictureBox();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.numericUpDownDotSpeed = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.labelDotAmount = new System.Windows.Forms.Label();
             this.numericUpDownDotAmount = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.checkBoxRndColors = new System.Windows.Forms.CheckBox();
             this.labelSpeed = new System.Windows.Forms.Label();
             this.checkBoxOnePerTick = new System.Windows.Forms.CheckBox();
             this.checkBoxRndFirstDot = new System.Windows.Forms.CheckBox();
             this.buttonToMenu = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDotWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
@@ -82,16 +81,11 @@ namespace fractals_2D
             0,
             0,
             65536});
-            this.numericUpDownDotWidth.Maximum = new decimal(new int[] {
-            30,
+            this.numericUpDownDotWidth.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
-            this.numericUpDownDotWidth.Minimum = new decimal(new int[] {
-            6,
-            0,
-            0,
-            65536});
             this.numericUpDownDotWidth.Name = "numericUpDownDotWidth";
             this.numericUpDownDotWidth.Value = new decimal(new int[] {
             1,
@@ -133,8 +127,14 @@ namespace fractals_2D
             resources.GetString("comboBoxColor.Items1"),
             resources.GetString("comboBoxColor.Items2"),
             resources.GetString("comboBoxColor.Items3"),
-            resources.GetString("comboBoxColor.Items4")});
+            resources.GetString("comboBoxColor.Items4"),
+            resources.GetString("comboBoxColor.Items5"),
+            resources.GetString("comboBoxColor.Items6"),
+            resources.GetString("comboBoxColor.Items7"),
+            resources.GetString("comboBoxColor.Items8")});
             this.comboBoxColor.Name = "comboBoxColor";
+            this.comboBoxColor.Enter += new System.EventHandler(this.comboBoxColor_Enter);
+            this.comboBoxColor.Leave += new System.EventHandler(this.comboBoxColor_Leave);
             // 
             // labelColor
             // 
@@ -147,11 +147,6 @@ namespace fractals_2D
             this.pictureBoxLine.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBoxLine.Name = "pictureBoxLine";
             this.pictureBoxLine.TabStop = false;
-            // 
-            // labelTitle
-            // 
-            resources.ApplyResources(this.labelTitle, "labelTitle");
-            this.labelTitle.Name = "labelTitle";
             // 
             // numericUpDownDotSpeed
             // 
@@ -197,18 +192,24 @@ namespace fractals_2D
             232,
             0,
             0});
+            this.numericUpDownDotAmount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDownDotAmount.Name = "numericUpDownDotAmount";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            this.numericUpDownDotAmount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // checkBoxRndColors
             // 
             resources.ApplyResources(this.checkBoxRndColors, "checkBoxRndColors");
             this.checkBoxRndColors.Name = "checkBoxRndColors";
             this.checkBoxRndColors.UseVisualStyleBackColor = true;
+            this.checkBoxRndColors.CheckedChanged += new System.EventHandler(this.checkBoxRndColors_CheckedChanged);
             // 
             // labelSpeed
             // 
@@ -218,8 +219,11 @@ namespace fractals_2D
             // checkBoxOnePerTick
             // 
             resources.ApplyResources(this.checkBoxOnePerTick, "checkBoxOnePerTick");
+            this.checkBoxOnePerTick.Checked = true;
+            this.checkBoxOnePerTick.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxOnePerTick.Name = "checkBoxOnePerTick";
             this.checkBoxOnePerTick.UseVisualStyleBackColor = true;
+            this.checkBoxOnePerTick.CheckedChanged += new System.EventHandler(this.checkBoxOnePerTick_CheckedChanged);
             // 
             // checkBoxRndFirstDot
             // 
@@ -234,21 +238,25 @@ namespace fractals_2D
             this.buttonToMenu.UseVisualStyleBackColor = true;
             this.buttonToMenu.Click += new System.EventHandler(this.buttonTest_Click);
             // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
             // Sierpinski_Triangle
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonToMenu);
             this.Controls.Add(this.checkBoxRndFirstDot);
             this.Controls.Add(this.checkBoxOnePerTick);
             this.Controls.Add(this.labelSpeed);
             this.Controls.Add(this.checkBoxRndColors);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.labelDotAmount);
             this.Controls.Add(this.numericUpDownDotAmount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDownDotSpeed);
-            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxLine);
             this.Controls.Add(this.labelColor);
             this.Controls.Add(this.comboBoxColor);
@@ -284,17 +292,16 @@ namespace fractals_2D
         private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.Label labelColor;
         private System.Windows.Forms.PictureBox pictureBoxLine;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.NumericUpDown numericUpDownDotSpeed;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelDotAmount;
         private System.Windows.Forms.NumericUpDown numericUpDownDotAmount;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBoxRndColors;
         private System.Windows.Forms.Label labelSpeed;
         private System.Windows.Forms.CheckBox checkBoxOnePerTick;
         private System.Windows.Forms.CheckBox checkBoxRndFirstDot;
         private System.Windows.Forms.Button buttonToMenu;
+        private System.Windows.Forms.Label label3;
     }
 }
 

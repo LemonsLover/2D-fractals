@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 
@@ -12,6 +13,7 @@ namespace fractals_2D
         private float dotWidth;
         private double dotAmount = 0;
         private int dotPerTick;
+        private Pen pen;
 
         public Sierpinski_Triangle()
         {
@@ -43,39 +45,32 @@ namespace fractals_2D
             numericUpDownDotSpeed_ValueChanged(sender, e);
             comboBoxColor.SelectedIndex = 0;
             dotAmount = 0;
-            if (checkBoxOnePerTick.Checked)
-                dotPerTick = 1;
-            else
-                dotPerTick = 1000;
+
+            comboBoxColor.ForeColor = Color.FromName(comboBoxColor.SelectedItem.ToString());
         }
 
         private void timerDraw_Tick(object sender, EventArgs e)
         {
-            if (checkBoxOnePerTick.Checked)
-                dotPerTick = 1;
-            else
-                dotPerTick = 1000;
             
             using (Graphics gr = pictureBoxScreen.CreateGraphics())
             {
-                Pen pen;
-                if (numericUpDownDotAmount.Value == 0)
-                    for (int i = 1; i <= dotPerTick; i++)
-                    {
-                        int j = rand.Next(0, 3);
-                        LastPoint = new PointF(
-                            (LastPoint.X + Corners[j].X) / 2,
-                            (LastPoint.Y + Corners[j].Y) / 2);
-                        if (!checkBoxRndColors.Checked)
-                            pen = new Pen(Color.FromName(comboBoxColor.SelectedItem.ToString()), dotWidth);
-                        else
-                            pen = new Pen(Color.FromArgb(rand.Next(0, 255), rand.Next(0, 255), rand.Next(0, 255)), dotWidth);
-                        gr.DrawEllipse(pen, LastPoint.X, LastPoint.Y,
-                        dotWidth, dotWidth);
-                        dotAmount++;
-                        this.Text = $"Треугольник Серпинского(Точек на экране: {dotAmount})";
-                    }
+                if (checkBoxOnePerTick.Checked)
+                {
+                    int j = rand.Next(0, 3);
+                    LastPoint = new PointF(
+                        (LastPoint.X + Corners[j].X) / 2,
+                        (LastPoint.Y + Corners[j].Y) / 2);
+                    if (!checkBoxRndColors.Checked)
+                        pen = new Pen(Color.FromName(comboBoxColor.SelectedItem.ToString()), dotWidth);
+                    else
+                        pen = new Pen(Color.FromArgb(rand.Next(0, 255), rand.Next(0, 255), rand.Next(0, 255)), dotWidth);
+                    gr.DrawEllipse(pen, LastPoint.X, LastPoint.Y,
+                    dotWidth, dotWidth);
+                    dotAmount++;
+                    this.Text = $"Треугольник Серпинского(Точек на экране: {dotAmount})";
+                }
                 else
+                {
                     for (int i = 1; i <= numericUpDownDotAmount.Value; i++)
                     {
                         int j = rand.Next(0, 3);
@@ -91,6 +86,9 @@ namespace fractals_2D
                         dotAmount++;
                         this.Text = $"Треугольник Серпинского(Точек на экране: {dotAmount})";
                     }
+                    checkBoxOnePerTick.Enabled = true;
+                    buttonToMenu.Enabled = true;
+                }
             }
         }
 
@@ -98,11 +96,6 @@ namespace fractals_2D
         {
             timerDraw.Enabled = false;
             DefineCorners();
-
-            //using (Graphics gr = pictureBoxScreen.CreateGraphics())
-            //{
-            //    gr.Clear(this.BackColor);
-            //}
         }
         private void numericUpDownDotSpeed_ValueChanged(object sender, EventArgs e)
         {
@@ -123,13 +116,14 @@ namespace fractals_2D
         private void buttonDraw_Click(object sender, EventArgs e)
         {
             buttonToMenu.Enabled = false;
-            if (numericUpDownDotAmount.Value == 0)
+            checkBoxOnePerTick.Enabled = false;
+            if (checkBoxOnePerTick.Checked)
                 timerDraw.Enabled = true;
             else
                 timerDraw_Tick(sender, e);
             dotWidth = Convert.ToInt64(numericUpDownDotWidth.Value);
             if(dotAmount == 1){
-                Pen pen = new Pen(Color.Brown, dotWidth);
+                pen = new Pen(Color.Brown, dotWidth);
                 using (Graphics gr = pictureBoxScreen.CreateGraphics())
                 {
                     gr.DrawEllipse(pen, LastPoint.X, LastPoint.Y, dotWidth, dotWidth);
@@ -141,24 +135,49 @@ namespace fractals_2D
         {
             timerDraw.Enabled = false;
             buttonToMenu.Enabled = true;
+            checkBoxOnePerTick.Enabled = true;
         }
 
         private void buttonClean_Click(object sender, EventArgs e)
         {
             DefineCorners();
+            timerDraw.Enabled = false;
+            buttonToMenu.Enabled = true;
+            checkBoxOnePerTick.Enabled = true;
+            dotAmount = 0;
             using (Graphics gr = pictureBoxScreen.CreateGraphics())
             {
                 gr.Clear(this.BackColor);
             }
-            timerDraw.Enabled = false;
-            buttonToMenu.Enabled = true;
-            dotAmount = 0;
             this.Text = $"Треугольник Серпинского(Точек на экране: {dotAmount})";
         }
 
         private void Sierpinski_Triangle_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void comboBoxColor_Enter(object sender, EventArgs e)
+        {
+            comboBoxColor.ForeColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void comboBoxColor_Leave(object sender, EventArgs e)
+        {
+            comboBoxColor.ForeColor = Color.FromName(comboBoxColor.SelectedItem.ToString());
+        }
+
+        private void checkBoxRndColors_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxColor.Enabled = !checkBoxRndColors.Checked;
+        }
+
+        private void checkBoxOnePerTick_CheckedChanged(object sender, EventArgs e)
+        {
+            numericUpDownDotSpeed.Enabled = checkBoxOnePerTick.Checked;
+            numericUpDownDotAmount.Enabled = !checkBoxOnePerTick.Checked;
+            if (!checkBoxOnePerTick.Checked)
+                MessageBox.Show("Для установки количества точек используется цикл который приостанавливет роботу программи. Не ставте большое количесто точек !", "Предупреждение !");
         }
     }
 }
