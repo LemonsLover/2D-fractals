@@ -42,7 +42,6 @@ namespace fractals_2D
             this.labelColor = new System.Windows.Forms.Label();
             this.pictureBoxLine = new System.Windows.Forms.PictureBox();
             this.numericUpDownDotSpeed = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelDotAmount = new System.Windows.Forms.Label();
             this.numericUpDownDotAmount = new System.Windows.Forms.NumericUpDown();
             this.checkBoxRndColors = new System.Windows.Forms.CheckBox();
@@ -51,6 +50,7 @@ namespace fractals_2D
             this.checkBoxRndFirstDot = new System.Windows.Forms.CheckBox();
             this.buttonToMenu = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.labelDelay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDotWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
@@ -174,11 +174,6 @@ namespace fractals_2D
             0});
             this.numericUpDownDotSpeed.ValueChanged += new System.EventHandler(this.numericUpDownDotSpeed_ValueChanged);
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // labelDotAmount
             // 
             resources.ApplyResources(this.labelDotAmount, "labelDotAmount");
@@ -243,10 +238,16 @@ namespace fractals_2D
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
+            // labelDelay
+            // 
+            resources.ApplyResources(this.labelDelay, "labelDelay");
+            this.labelDelay.Name = "labelDelay";
+            // 
             // Sierpinski_Triangle
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelDelay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonToMenu);
             this.Controls.Add(this.checkBoxRndFirstDot);
@@ -255,7 +256,6 @@ namespace fractals_2D
             this.Controls.Add(this.checkBoxRndColors);
             this.Controls.Add(this.labelDotAmount);
             this.Controls.Add(this.numericUpDownDotAmount);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDownDotSpeed);
             this.Controls.Add(this.pictureBoxLine);
             this.Controls.Add(this.labelColor);
@@ -293,7 +293,6 @@ namespace fractals_2D
         private System.Windows.Forms.Label labelColor;
         private System.Windows.Forms.PictureBox pictureBoxLine;
         private System.Windows.Forms.NumericUpDown numericUpDownDotSpeed;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelDotAmount;
         private System.Windows.Forms.NumericUpDown numericUpDownDotAmount;
         private System.Windows.Forms.CheckBox checkBoxRndColors;
@@ -302,6 +301,7 @@ namespace fractals_2D
         private System.Windows.Forms.CheckBox checkBoxRndFirstDot;
         private System.Windows.Forms.Button buttonToMenu;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelDelay;
     }
 }
 

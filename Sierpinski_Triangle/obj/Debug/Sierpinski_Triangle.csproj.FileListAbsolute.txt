@@ -41,3 +41,4 @@ C:\Users\dizon\OneDrive\Desktop\Project\2d-fractals\Sierpinski_Triangle\obj\Debu
 C:\Users\dizon\OneDrive\Desktop\Project\2d-fractals\Sierpinski_Triangle\obj\Debug\aa-ER\fractals_2D.resources.dll
 C:\Users\dizon\OneDrive\Desktop\Project\2d-fractals\Sierpinski_Triangle\obj\Debug\fractals_2D.exe
 C:\Users\dizon\OneDrive\Desktop\Project\2d-fractals\Sierpinski_Triangle\obj\Debug\fractals_2D.pdb
+C:\Users\Yehor\Desktop\project\2d-fractals\Sierpinski_Triangle\obj\Debug\fractals_2D.Sierpinski_Carpet.aa-ER.resources

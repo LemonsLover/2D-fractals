@@ -30,38 +30,116 @@ namespace fractals_2D
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sierpinski_Carpet));
+            this.pictureBoxScreen = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLine = new System.Windows.Forms.PictureBox();
             this.buttonToMenu = new System.Windows.Forms.Button();
+            this.trackBarDepth = new System.Windows.Forms.TrackBar();
+            this.labelDepth = new System.Windows.Forms.Label();
+            this.buttonDraw = new System.Windows.Forms.Button();
+            this.comboBoxColor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDepth)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBoxScreen
+            // 
+            resources.ApplyResources(this.pictureBoxScreen, "pictureBoxScreen");
+            this.pictureBoxScreen.Name = "pictureBoxScreen";
+            this.pictureBoxScreen.TabStop = false;
+            // 
+            // pictureBoxLine
+            // 
+            this.pictureBoxLine.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            resources.ApplyResources(this.pictureBoxLine, "pictureBoxLine");
+            this.pictureBoxLine.Name = "pictureBoxLine";
+            this.pictureBoxLine.TabStop = false;
             // 
             // buttonToMenu
             // 
-            this.buttonToMenu.Location = new System.Drawing.Point(455, 152);
-            this.buttonToMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            resources.ApplyResources(this.buttonToMenu, "buttonToMenu");
             this.buttonToMenu.Name = "buttonToMenu";
-            this.buttonToMenu.Size = new System.Drawing.Size(291, 209);
-            this.buttonToMenu.TabIndex = 0;
-            this.buttonToMenu.Text = "Меню";
             this.buttonToMenu.UseVisualStyleBackColor = true;
-            this.buttonToMenu.Click += new System.EventHandler(this.buttonTest_Click);
+            this.buttonToMenu.Click += new System.EventHandler(this.buttonToMenu_Click);
+            // 
+            // trackBarDepth
+            // 
+            resources.ApplyResources(this.trackBarDepth, "trackBarDepth");
+            this.trackBarDepth.Minimum = 1;
+            this.trackBarDepth.Name = "trackBarDepth";
+            this.trackBarDepth.Value = 5;
+            this.trackBarDepth.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // labelDepth
+            // 
+            resources.ApplyResources(this.labelDepth, "labelDepth");
+            this.labelDepth.Name = "labelDepth";
+            // 
+            // buttonDraw
+            // 
+            resources.ApplyResources(this.buttonDraw, "buttonDraw");
+            this.buttonDraw.Name = "buttonDraw";
+            this.buttonDraw.UseVisualStyleBackColor = true;
+            this.buttonDraw.Click += new System.EventHandler(this.buttonDraw_Click);
+            // 
+            // comboBoxColor
+            // 
+            resources.ApplyResources(this.comboBoxColor, "comboBoxColor");
+            this.comboBoxColor.FormattingEnabled = true;
+            this.comboBoxColor.Items.AddRange(new object[] {
+            resources.GetString("comboBoxColor.Items"),
+            resources.GetString("comboBoxColor.Items1"),
+            resources.GetString("comboBoxColor.Items2"),
+            resources.GetString("comboBoxColor.Items3"),
+            resources.GetString("comboBoxColor.Items4"),
+            resources.GetString("comboBoxColor.Items5"),
+            resources.GetString("comboBoxColor.Items6"),
+            resources.GetString("comboBoxColor.Items7"),
+            resources.GetString("comboBoxColor.Items8"),
+            resources.GetString("comboBoxColor.Items9")});
+            this.comboBoxColor.Name = "comboBoxColor";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // Sierpinski_Carpet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 601);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBoxColor);
+            this.Controls.Add(this.buttonDraw);
+            this.Controls.Add(this.labelDepth);
+            this.Controls.Add(this.trackBarDepth);
             this.Controls.Add(this.buttonToMenu);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.pictureBoxLine);
+            this.Controls.Add(this.pictureBoxScreen);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Sierpinski_Carpet";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ковер серпинского";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sierpinski_Carpet_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SierpinskiCarpet_FormClosing);
+            this.Load += new System.EventHandler(this.SierpinskiCarpet_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDepth)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Timer Draw_Tick;
+        private System.Windows.Forms.PictureBox pictureBoxLine;
         private System.Windows.Forms.Button buttonToMenu;
+        private System.Windows.Forms.TrackBar trackBarDepth;
+        private System.Windows.Forms.Label labelDepth;
+        private System.Windows.Forms.PictureBox pictureBoxScreen;
+        private System.Windows.Forms.Button buttonDraw;
+        private System.Windows.Forms.ComboBox comboBoxColor;
+        private System.Windows.Forms.Label label1;
     }
 }
+

@@ -420,36 +420,6 @@
   <data name="&gt;&gt;numericUpDownDotSpeed.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>639, 103</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Скорось точек(т/мс):</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="labelDotAmount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -478,7 +448,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelDotAmount.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="numericUpDownDotAmount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -508,7 +478,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;numericUpDownDotAmount.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="checkBoxRndColors.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -541,7 +511,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBoxRndColors.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="labelSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -553,13 +523,13 @@
     <value>640, 147</value>
   </data>
   <data name="labelSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 13</value>
+    <value>99, 13</value>
   </data>
   <data name="labelSpeed.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="labelSpeed.Text" xml:space="preserve">
-    <value>* 1 - максимальная </value>
+    <value>* 1 - минимальная</value>
   </data>
   <data name="&gt;&gt;labelSpeed.Name" xml:space="preserve">
     <value>labelSpeed</value>
@@ -571,7 +541,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelSpeed.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="checkBoxOnePerTick.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -601,7 +571,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBoxOnePerTick.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="checkBoxRndFirstDot.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -631,7 +601,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBoxRndFirstDot.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="buttonToMenu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -661,7 +631,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonToMenu.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -694,6 +664,39 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelDelay.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelDelay.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDelay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelDelay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>640, 100</value>
+  </data>
+  <data name="labelDelay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
+  </data>
+  <data name="labelDelay.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="labelDelay.Text" xml:space="preserve">
+    <value>Задержка счетчика(мс):</value>
+  </data>
+  <data name="&gt;&gt;labelDelay.Name" xml:space="preserve">
+    <value>labelDelay</value>
+  </data>
+  <data name="&gt;&gt;labelDelay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDelay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDelay.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
