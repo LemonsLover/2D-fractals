@@ -1,7 +1,7 @@
 ﻿
 namespace fractals_2D
 {
-    partial class Sierpinski_Triangle
+    partial class Sierpinski_Triangle_Chaos
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace fractals_2D
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sierpinski_Triangle));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sierpinski_Triangle_Chaos));
             this.pictureBoxScreen = new System.Windows.Forms.PictureBox();
             this.buttonDraw = new System.Windows.Forms.Button();
             this.numericUpDownDotWidth = new System.Windows.Forms.NumericUpDown();

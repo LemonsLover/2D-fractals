@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace fractals_2D
 {
-    public partial class Sierpinski_Carpet : Form
+    public partial class Sierpinski_Carpet_Iter : Form
     {
 
-        public Sierpinski_Carpet()
+        public Sierpinski_Carpet_Iter()
         {
             InitializeComponent();
         }
@@ -33,25 +33,25 @@ namespace fractals_2D
             else
             {
                 
-                float width = rect.Width / 3f;
+                float Width = rect.Width / 3f;
                 float x0 = rect.Left;
-                float x1 = x0 + width;
-                float x2 = x0 + width * 2f;
+                float x1 = x0 + Width;
+                float x2 = x0 + Width * 2f;
 
-                float height = rect.Height / 3f;
+                float Height = rect.Height / 3f;
                 float y0 = rect.Top;
-                float y1 = y0 + height;
-                float y2 = y0 + height * 2f;
+                float y1 = y0 + Height;
+                float y2 = y0 + Height * 2f;
 
 
-                CarpetDraw(gr, depthLevel - 1, new RectangleF(x0, y0, width, height), color);
-                CarpetDraw(gr, depthLevel - 1, new RectangleF(x1, y0, width, height), color);
-                CarpetDraw(gr, depthLevel - 1, new RectangleF(x2, y0, width, height), color);
-                CarpetDraw(gr, depthLevel - 1, new RectangleF(x0, y1, width, height), color);
-                CarpetDraw(gr, depthLevel - 1, new RectangleF(x2, y1, width, height), color);
-                CarpetDraw(gr, depthLevel - 1, new RectangleF(x0, y2, width, height), color);
-                CarpetDraw(gr, depthLevel - 1, new RectangleF(x1, y2, width, height), color);
-                CarpetDraw(gr, depthLevel - 1, new RectangleF(x2, y2, width, height), color);
+                CarpetDraw(gr, depthLevel - 1, new RectangleF(x0, y0, Width, Height), color);
+                CarpetDraw(gr, depthLevel - 1, new RectangleF(x1, y0, Width, Height), color);
+                CarpetDraw(gr, depthLevel - 1, new RectangleF(x2, y0, Width, Height), color);
+                CarpetDraw(gr, depthLevel - 1, new RectangleF(x0, y1, Width, Height), color);
+                CarpetDraw(gr, depthLevel - 1, new RectangleF(x2, y1, Width, Height), color);
+                CarpetDraw(gr, depthLevel - 1, new RectangleF(x0, y2, Width, Height), color);
+                CarpetDraw(gr, depthLevel - 1, new RectangleF(x1, y2, Width, Height), color);
+                CarpetDraw(gr, depthLevel - 1, new RectangleF(x2, y2, Width, Height), color);
             }
         }
 

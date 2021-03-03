@@ -19,13 +19,24 @@ namespace fractals_2D
 
         private void buttonToTriangle_Click(object sender, EventArgs e)
         {
-            new Sierpinski_Triangle().Show();
+            new Sierpinski_Triangle_Chaos().Show();
             this.Hide();
         }
 
         private void buttonToCarpet_Click(object sender, EventArgs e)
         {
-            new Sierpinski_Carpet().Show();
+            new Sierpinski_Carpet_Iter().Show();
+            this.Hide();
+        }
+
+        private void buttonToCarpetChaos_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("В разработке !");
+        }
+
+        private void buttonToTriangleIter_Click(object sender, EventArgs e)
+        {
+            new Sierpinski_Triangle_Iter().Show();
             this.Hide();
         }
 

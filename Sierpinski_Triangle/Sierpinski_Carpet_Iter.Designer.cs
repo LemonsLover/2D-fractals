@@ -1,7 +1,7 @@
 ﻿
 namespace fractals_2D
 {
-    partial class Sierpinski_Carpet
+    partial class Sierpinski_Carpet_Iter
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace fractals_2D
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sierpinski_Carpet));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sierpinski_Carpet_Iter));
             this.pictureBoxScreen = new System.Windows.Forms.PictureBox();
             this.pictureBoxLine = new System.Windows.Forms.PictureBox();
             this.buttonToMenu = new System.Windows.Forms.Button();
@@ -105,7 +105,7 @@ namespace fractals_2D
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // Sierpinski_Carpet
+            // Sierpinski_Carpet_Iter
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
@@ -119,7 +119,7 @@ namespace fractals_2D
             this.Controls.Add(this.pictureBoxScreen);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Sierpinski_Carpet";
+            this.Name = "Sierpinski_Carpet_Iter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SierpinskiCarpet_FormClosing);
             this.Load += new System.EventHandler(this.SierpinskiCarpet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).EndInit();
@@ -131,7 +131,6 @@ namespace fractals_2D
         }
 
         #endregion
-        private System.Windows.Forms.Timer Draw_Tick;
         private System.Windows.Forms.PictureBox pictureBoxLine;
         private System.Windows.Forms.Button buttonToMenu;
         private System.Windows.Forms.TrackBar trackBarDepth;

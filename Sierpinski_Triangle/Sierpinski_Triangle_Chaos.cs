@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace fractals_2D
 {
-    public partial class Sierpinski_Triangle : Form
+    public partial class Sierpinski_Triangle_Chaos : Form
     {
         private Random rand = new Random();
         private float dotWidth;
@@ -15,7 +15,7 @@ namespace fractals_2D
         private int dotPerTick;
         private Pen pen;
 
-        public Sierpinski_Triangle()
+        public Sierpinski_Triangle_Chaos()
         {
             InitializeComponent();
         }
