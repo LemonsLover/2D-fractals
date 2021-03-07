@@ -31,7 +31,8 @@ namespace fractals_2D
 
         private void buttonToCarpetChaos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("В разработке !");
+            new Sierpinski_Carpet_Chaos().Show();
+            this.Hide();
         }
 
         private void buttonToTriangleIter_Click(object sender, EventArgs e)

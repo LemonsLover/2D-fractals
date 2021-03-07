@@ -58,6 +58,12 @@
     <Compile Include="Sierpinski_Carpet_Iter.Designer.cs">
       <DependentUpon>Sierpinski_Carpet_Iter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sierpinski_Carpet_Chaos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sierpinski_Carpet_Chaos.Designer.cs">
+      <DependentUpon>Sierpinski_Carpet_Chaos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sierpinski_Triangle_Chaos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sierpinski_Carpet_Iter.resx">
       <DependentUpon>Sierpinski_Carpet_Iter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sierpinski_Carpet_Chaos.aa-ER.resx">
+      <DependentUpon>Sierpinski_Carpet_Chaos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sierpinski_Carpet_Chaos.resx">
+      <DependentUpon>Sierpinski_Carpet_Chaos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sierpinski_Triangle_Chaos.aa-ER.resx">
       <DependentUpon>Sierpinski_Triangle_Chaos.cs</DependentUpon>

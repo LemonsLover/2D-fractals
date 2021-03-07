@@ -59,3 +59,5 @@ C:\Users\Yehor\Desktop\2dfract\2d-fractals\Sierpinski_Triangle\obj\Debug\fractal
 C:\Users\Yehor\Desktop\2dfract\2d-fractals\Sierpinski_Triangle\obj\Debug\fractals_2D.Sierpinski_Carpet_Iter.aa-ER.resources
 C:\Users\Yehor\Desktop\2dfract\2d-fractals\Sierpinski_Triangle\obj\Debug\fractals_2D.Sierpinski_Triangle_Chaos.aa-ER.resources
 C:\Users\Yehor\Desktop\2dfract\2d-fractals\Sierpinski_Triangle\obj\Debug\fractals_2D.Sierpinski_Triangle_Iter.resources
+C:\Users\Yehor\Desktop\2dfract\2d-fractals\Sierpinski_Triangle\obj\Debug\fractals_2D.Sierpinski_Carpet_Chaos.resources
+C:\Users\Yehor\Desktop\2dfract\2d-fractals\Sierpinski_Triangle\obj\Debug\fractals_2D.Sierpinski_Carpet_Chaos.aa-ER.resources
