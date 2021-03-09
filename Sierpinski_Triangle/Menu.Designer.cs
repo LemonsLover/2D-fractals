@@ -39,6 +39,7 @@ namespace fractals_2D
             this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.panelChaos = new System.Windows.Forms.Panel();
+            this.buttonToCarpetChaos = new System.Windows.Forms.Button();
             this.labelChaosM = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,18 +51,17 @@ namespace fractals_2D
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonToTriangleIter = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.buttonToCarpetChaos = new System.Windows.Forms.Button();
-            this.buttonToTriangleIter = new System.Windows.Forms.Button();
             this.panelChaos.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -146,8 +146,19 @@ namespace fractals_2D
             this.panelChaos.Controls.Add(this.buttonToTriangleChaos);
             this.panelChaos.Location = new System.Drawing.Point(0, 0);
             this.panelChaos.Name = "panelChaos";
-            this.panelChaos.Size = new System.Drawing.Size(302, 181);
+            this.panelChaos.Size = new System.Drawing.Size(310, 181);
             this.panelChaos.TabIndex = 11;
+            // 
+            // buttonToCarpetChaos
+            // 
+            this.buttonToCarpetChaos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonToCarpetChaos.Location = new System.Drawing.Point(38, 101);
+            this.buttonToCarpetChaos.Name = "buttonToCarpetChaos";
+            this.buttonToCarpetChaos.Size = new System.Drawing.Size(252, 56);
+            this.buttonToCarpetChaos.TabIndex = 2;
+            this.buttonToCarpetChaos.Text = "Ковер Серпинского";
+            this.buttonToCarpetChaos.UseVisualStyleBackColor = true;
+            this.buttonToCarpetChaos.Click += new System.EventHandler(this.buttonToCarpetChaos_Click);
             // 
             // labelChaosM
             // 
@@ -278,8 +289,74 @@ namespace fractals_2D
             this.panel1.Controls.Add(this.label14);
             this.panel1.Location = new System.Drawing.Point(0, 175);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(302, 181);
+            this.panel1.Size = new System.Drawing.Size(310, 181);
             this.panel1.TabIndex = 12;
+            // 
+            // buttonToTriangleIter
+            // 
+            this.buttonToTriangleIter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonToTriangleIter.Location = new System.Drawing.Point(38, 19);
+            this.buttonToTriangleIter.Name = "buttonToTriangleIter";
+            this.buttonToTriangleIter.Size = new System.Drawing.Size(252, 56);
+            this.buttonToTriangleIter.TabIndex = 32;
+            this.buttonToTriangleIter.Text = "Треугольник Серпинского";
+            this.buttonToTriangleIter.UseVisualStyleBackColor = true;
+            this.buttonToTriangleIter.Click += new System.EventHandler(this.buttonToTriangleIter_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(12, 161);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(11, 15);
+            this.label19.TabIndex = 31;
+            this.label19.Text = ".";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(10, 146);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(16, 15);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "Р";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(10, 131);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(16, 15);
+            this.label17.TabIndex = 29;
+            this.label17.Text = "Е";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(10, 116);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(15, 15);
+            this.label16.TabIndex = 28;
+            this.label16.Text = "Т";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(10, 101);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(17, 15);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "И";
             // 
             // label10
             // 
@@ -303,17 +380,6 @@ namespace fractals_2D
             this.label11.TabIndex = 25;
             this.label11.Text = "О";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 45);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(15, 15);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Т";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -325,6 +391,17 @@ namespace fractals_2D
             this.label13.TabIndex = 23;
             this.label13.Text = "Е";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(12, 45);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(15, 15);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Т";
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -335,83 +412,6 @@ namespace fractals_2D
             this.label14.Size = new System.Drawing.Size(19, 15);
             this.label14.TabIndex = 22;
             this.label14.Text = "М";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(10, 101);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(17, 15);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "И";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(10, 116);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(15, 15);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "Т";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(10, 131);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(16, 15);
-            this.label17.TabIndex = 29;
-            this.label17.Text = "Е";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(10, 146);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(16, 15);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "Р";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(12, 161);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(11, 15);
-            this.label19.TabIndex = 31;
-            this.label19.Text = ".";
-            // 
-            // buttonToCarpetChaos
-            // 
-            this.buttonToCarpetChaos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonToCarpetChaos.Location = new System.Drawing.Point(38, 101);
-            this.buttonToCarpetChaos.Name = "buttonToCarpetChaos";
-            this.buttonToCarpetChaos.Size = new System.Drawing.Size(252, 56);
-            this.buttonToCarpetChaos.TabIndex = 2;
-            this.buttonToCarpetChaos.Text = "Ковер Серпинского";
-            this.buttonToCarpetChaos.UseVisualStyleBackColor = true;
-            this.buttonToCarpetChaos.Click += new System.EventHandler(this.buttonToCarpetChaos_Click);
-            // 
-            // buttonToTriangleIter
-            // 
-            this.buttonToTriangleIter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonToTriangleIter.Location = new System.Drawing.Point(38, 19);
-            this.buttonToTriangleIter.Name = "buttonToTriangleIter";
-            this.buttonToTriangleIter.Size = new System.Drawing.Size(252, 56);
-            this.buttonToTriangleIter.TabIndex = 32;
-            this.buttonToTriangleIter.Text = "Треугольник Серпинского";
-            this.buttonToTriangleIter.UseVisualStyleBackColor = true;
-            this.buttonToTriangleIter.Click += new System.EventHandler(this.buttonToTriangleIter_Click);
             // 
             // Menu
             // 
@@ -434,7 +434,6 @@ namespace fractals_2D
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(320, 430);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(320, 430);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

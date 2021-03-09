@@ -29,6 +29,7 @@ namespace fractals_2D
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sierpinski_Triangle_Iter));
             this.buttonToMenu = new System.Windows.Forms.Button();
             this.pictureBoxLine = new System.Windows.Forms.PictureBox();
             this.pictureBoxScreen = new System.Windows.Forms.PictureBox();
@@ -117,6 +118,7 @@ namespace fractals_2D
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(626, 64);
@@ -158,6 +160,7 @@ namespace fractals_2D
             this.Controls.Add(this.pictureBoxScreen);
             this.Controls.Add(this.pictureBoxLine);
             this.Controls.Add(this.buttonToMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 540);
             this.Name = "Sierpinski_Triangle_Iter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

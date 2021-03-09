@@ -243,7 +243,7 @@ namespace fractals_2D
             resources.ApplyResources(this.labelDelay, "labelDelay");
             this.labelDelay.Name = "labelDelay";
             // 
-            // Sierpinski_Triangle
+            // Sierpinski_Triangle_Chaos
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,7 +266,7 @@ namespace fractals_2D
             this.Controls.Add(this.numericUpDownDotWidth);
             this.Controls.Add(this.buttonDraw);
             this.Controls.Add(this.pictureBoxScreen);
-            this.Name = "Sierpinski_Triangle";
+            this.Name = "Sierpinski_Triangle_Chaos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sierpinski_Triangle_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).EndInit();
