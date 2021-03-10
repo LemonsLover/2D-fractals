@@ -9,7 +9,6 @@ namespace fractals_2D
 {
     public partial class Sierpinski_Carpet_Iter : Form
     {
-
         public Sierpinski_Carpet_Iter()
         {
             InitializeComponent();
@@ -19,10 +18,11 @@ namespace fractals_2D
         {
             trackBar1_Scroll(sender, e);
             pictureBoxScreen.Width = pictureBoxScreen.Height;
-            comboBoxColor.SelectedIndex = 2;
+            comboBoxColor.SelectedIndex = 0;
+            comboBoxResolution.SelectedIndex = 0;
         }
 
-        private void CarpetDraw(Graphics gr, int depthLevel, RectangleF rect, string color = "blue")
+        private void CarpetDraw(Graphics gr, int depthLevel, RectangleF rect, string color = "black")
         {
             
             SolidBrush solidBrush = new SolidBrush(Color.FromName(color));
@@ -80,6 +80,51 @@ namespace fractals_2D
                 gr.Clear(this.BackColor);
                 CarpetDraw(gr, trackBarDepth.Value, new RectangleF(0, 0, pictureBoxScreen.Height, pictureBoxScreen.Width), comboBoxColor.SelectedItem.ToString());
             }
+        }
+
+        private void comboBoxResolution_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (Graphics gr = pictureBoxScreen.CreateGraphics()) 
+            {
+                gr.Clear(this.BackColor);
+            }
+
+            switch (comboBoxResolution.SelectedIndex)
+            {
+                case 0:
+                    pictureBoxScreen.Size = new Size(500,500);
+                    this.Size = new Size(pictureBoxScreen.Width + 300, pictureBoxScreen.Size.Height + 40);
+                    break;
+                case 1:
+                    pictureBoxScreen.Size = new Size(600, 600);
+                    this.Size = new Size(pictureBoxScreen.Width + 300, pictureBoxScreen.Size.Height + 40);
+                    break;
+                case 2:
+                    pictureBoxScreen.Size = new Size(700, 700);
+                    this.Size = new Size(pictureBoxScreen.Width + 300, pictureBoxScreen.Size.Height + 40);
+                    break;
+                case 3:
+                    pictureBoxScreen.Size = new Size(700, 700);
+                    this.Size = new Size(pictureBoxScreen.Width + 300, pictureBoxScreen.Size.Height + 40);
+                    break;
+                case 4:
+                    pictureBoxScreen.Size = new Size(800, 800);
+                    this.Size = new Size(pictureBoxScreen.Width + 300, pictureBoxScreen.Size.Height + 40);
+                    break;
+                case 5:
+                    pictureBoxScreen.Size = new Size(900, 900);
+                    this.Size = new Size(pictureBoxScreen.Width + 300, pictureBoxScreen.Size.Height + 40);
+                    break;
+                case 6:
+                    pictureBoxScreen.Size = new Size(1000, 1000);
+                    this.Size = new Size(pictureBoxScreen.Width + 300, pictureBoxScreen.Size.Height + 40);
+                    break;
+            }
+        }
+
+        private void Sierpinski_Carpet_Iter_ResizeEnd(object sender, EventArgs e)
+        {
+            comboBoxResolution_SelectedIndexChanged(sender, e);
         }
     }
 }

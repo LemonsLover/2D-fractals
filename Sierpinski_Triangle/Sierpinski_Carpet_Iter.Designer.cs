@@ -38,6 +38,8 @@ namespace fractals_2D
             this.buttonDraw = new System.Windows.Forms.Button();
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxResolution = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDepth)).BeginInit();
@@ -51,8 +53,8 @@ namespace fractals_2D
             // 
             // pictureBoxLine
             // 
-            this.pictureBoxLine.BackColor = System.Drawing.SystemColors.AppWorkspace;
             resources.ApplyResources(this.pictureBoxLine, "pictureBoxLine");
+            this.pictureBoxLine.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBoxLine.Name = "pictureBoxLine";
             this.pictureBoxLine.TabStop = false;
             // 
@@ -96,8 +98,7 @@ namespace fractals_2D
             resources.GetString("comboBoxColor.Items5"),
             resources.GetString("comboBoxColor.Items6"),
             resources.GetString("comboBoxColor.Items7"),
-            resources.GetString("comboBoxColor.Items8"),
-            resources.GetString("comboBoxColor.Items9")});
+            resources.GetString("comboBoxColor.Items8")});
             this.comboBoxColor.Name = "comboBoxColor";
             // 
             // label1
@@ -105,10 +106,31 @@ namespace fractals_2D
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // comboBoxResolution
+            // 
+            resources.ApplyResources(this.comboBoxResolution, "comboBoxResolution");
+            this.comboBoxResolution.FormattingEnabled = true;
+            this.comboBoxResolution.Items.AddRange(new object[] {
+            resources.GetString("comboBoxResolution.Items"),
+            resources.GetString("comboBoxResolution.Items1"),
+            resources.GetString("comboBoxResolution.Items2"),
+            resources.GetString("comboBoxResolution.Items3"),
+            resources.GetString("comboBoxResolution.Items4"),
+            resources.GetString("comboBoxResolution.Items5")});
+            this.comboBoxResolution.Name = "comboBoxResolution";
+            this.comboBoxResolution.SelectedIndexChanged += new System.EventHandler(this.comboBoxResolution_SelectedIndexChanged);
+            // 
             // Sierpinski_Carpet_Iter
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBoxResolution);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxColor);
             this.Controls.Add(this.buttonDraw);
@@ -122,6 +144,7 @@ namespace fractals_2D
             this.Name = "Sierpinski_Carpet_Iter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SierpinskiCarpet_FormClosing);
             this.Load += new System.EventHandler(this.SierpinskiCarpet_Load);
+            this.ResizeEnd += new System.EventHandler(this.Sierpinski_Carpet_Iter_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarDepth)).EndInit();
@@ -139,6 +162,8 @@ namespace fractals_2D
         private System.Windows.Forms.Button buttonDraw;
         private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxResolution;
     }
 }
 

@@ -73,7 +73,7 @@ namespace fractals_2D
                     gr.DrawEllipse(pen, LastPoint.X, LastPoint.Y,
                     dotWidth, dotWidth);
                     dotAmount++;
-                    this.Text = $"Треугольник Серпинского(Точек на экране: {dotAmount})";
+                    this.Text = $"Ковёр Серпинского(Точек на экране: {dotAmount})";
                 }
                 else
                 {

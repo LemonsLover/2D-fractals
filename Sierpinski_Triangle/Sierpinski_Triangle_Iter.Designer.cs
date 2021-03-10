@@ -140,8 +140,7 @@ namespace fractals_2D
             "Yellow",
             "Navy",
             "Crimson",
-            "Orange",
-            "red"});
+            "Orange"});
             this.comboBoxColor.Location = new System.Drawing.Point(626, 81);
             this.comboBoxColor.Name = "comboBoxColor";
             this.comboBoxColor.Size = new System.Drawing.Size(139, 21);

@@ -24,7 +24,7 @@ namespace fractals_2D
         }
 
 
-        private void DrawTriangle(Graphics gr, int depthLevel, PointF topPoint, PointF leftPoint, PointF rightPoint, string color = "red")
+        private void DrawTriangle(Graphics gr, int depthLevel, PointF topPoint, PointF leftPoint, PointF rightPoint, string color = "black")
         {
             SolidBrush solidBrush = new SolidBrush(Color.FromName(color));
             if (depthLevel == 0)
